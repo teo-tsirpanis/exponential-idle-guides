@@ -2,6 +2,7 @@
 title: "Introduction to Graduation"
 author: "LE★Baldy & Snaeky"
 contributors: "The Amazing Community"
+draft: true
 order: 2
 ---
 
