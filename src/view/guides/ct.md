@@ -5,7 +5,6 @@ description: "Our guide of strategies for each Custom Theory."
 author: "LE★Baldy and Snaeky"
 contributors: "the Amazing Community"
 draft: true
-cts: true
 order: 7
 ---
 {% import "embed-yt.njk" as yt %}
@@ -87,3 +86,11 @@ As with theories being named T1-T9, custom theories also have abbreviations. The
 #### CSR2 strategy
 
 #### CSR2 milestone route
+
+### Quality of Life
+
+#### QoL overview
+
+#### QoL features
+
+#### How to use QoL

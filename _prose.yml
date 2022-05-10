@@ -33,7 +33,3 @@ prose:
         field:
           element: "text"
           label: "Contributors"
-      - name: "cts"
-        field:
-          element: "checkbox"
-          label: "CT?"
