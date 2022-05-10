@@ -557,7 +557,7 @@ repeat.
       <tr>
          <td class="invisible">Or</td>
          <td class="invisible"></td>
-         <td class="invisible></td>
+         <td class="invisible"></td>
          <td class="invisible"></td>
          <td class="invisible"></td>
          <td class="invisible"></td>
@@ -605,7 +605,7 @@ repeat.
       <tr>
          <td class="invisible">Or</td>
          <td class="invisible"></td>
-         <td class="invisible></td>
+         <td class="invisible"></td>
          <td class="invisible"></td>
          <td class="invisible"></td>
          <td class="invisible"></td>
@@ -702,7 +702,7 @@ mark, swap to only buying \\(c_3\\), \\(q_1\\), and \\(q_2\\).
       <tr>
          <td class="invisible"><strong>Or</strong></td>
          <td class="invisible"></td>
-         <td class="invisible></td>
+         <td class="invisible"></td>
          <td class="invisible"></td>
          <td class="invisible"></td>
          <td class="invisible"></td>

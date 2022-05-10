@@ -4,7 +4,7 @@ description: "Our guide for running the theory simulator and understanding the r
 author: "LE★Baldy, Snaeky, and Gaunter"
 contributors: "Antharion for the simulator itself"
 draft: true
-order: 7
+order: 8
 ---
 
 ### Before you start
