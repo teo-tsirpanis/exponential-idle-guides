@@ -1,6 +1,6 @@
 ---
 title: "Custom Theories"
-subtitle: "The World of Creativity"
+subtitle: "Community Driven Game Content"
 description: "Our guide of strategies for each Custom Theory."
 author: "LE★Baldy and Snaeky"
 contributors: "the Amazing Community"
