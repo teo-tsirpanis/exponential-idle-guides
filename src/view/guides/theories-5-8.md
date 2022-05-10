@@ -418,9 +418,7 @@ cheap (e1 less \\(\rho\\)) and the rest full auto. After milestone 5, turn it on
 ### Theory 8 skipping
 
 T8 skip is significantly faster than buying T8 right away (don't worry, you will still buy it, just at 14k, not 12k). T8 is very slow until you get to about \\(e60\\) (it took the sim 16 hours to get that far into the theory without R9). We highly recommend buying t8 for the achievement, then selling it right away and using those students for \\(\phi\\). You will need
-about e1350 \\(\tau\\) in order to get R9 (\\(ee14k\\)) without T8, which will help you get
-through T8 faster than before. **You will need to buy T8 again to get R9, and you should start R9 right away after that**
-The current recommendation for your \\(\tau\\) distribution for T8 skip is as follows:
+about e1350 \\(\tau\\) in order to get R9 (\\(ee14k\\)) without T8, which will help you get through T8 faster than before. **You will need to buy T8 again to get R9, and you should start R9 right away after that**. The current recommendation for your \\(\tau\\) distribution for T8 skip is as follows:
 
 <table class="newwords">
    <thead>
