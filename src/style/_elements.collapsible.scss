@@ -15,9 +15,6 @@
 .active, .collapsible:hover {
   background-color: var(--palette-fill-sidebar-hover);
 }
-.active {
-  color: var(--palette-stroke-collapsible-header);
-}
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
