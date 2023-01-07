@@ -70,6 +70,7 @@ $('.collapsible').each(function() {
     }
   })
   console.log(temp);
+  console.log(skiplist);
   while (temp.length > 0) {
     skiplist.shift()
     temp.shift()
@@ -93,7 +94,7 @@ $('h3').each(function(i, e) {
     if ($.contains(content[0], h4[0])) {
       console.log(arrcollap[arrcollap.indexOf(h4id) + 1]);
       console.log(skiplist);
-      if ((arrcollap[arrcollap.indexOf(h4id) + 1] === undefined && skiplist.length > 0) || arrcollap.indexOf(h4id) === -1) {
+      if (arrcollap[arrcollap.indexOf(h4id) + 1] === undefined || arrcollap.indexOf(h4id) === -1) {
         $(this)
           .nextUntil(skiplist[0])
           .wrapAll("<div class='content'/>");
