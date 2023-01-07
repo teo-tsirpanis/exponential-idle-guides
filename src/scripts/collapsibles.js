@@ -56,6 +56,7 @@ $("h3").each(function() { //add collapsible to every h3 and h4 with unique ids b
   });
 });
 
+console.log('temp:');
 arrcollap = [];
 $('.collapsible').each(function() {
   const ele = $(this);
@@ -68,12 +69,14 @@ $('.collapsible').each(function() {
       return false
     }
   })
+  console.log(temp);
   while (temp.length > 0) {
     skiplist.shift()
     temp.shift()
   }
   arrcollap.push('#' + ele.attr('id'))
 })
+console.log('arrcollap:');
 console.log(arrcollap);
 
 $('h3').each(function(i, e) {
