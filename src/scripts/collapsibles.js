@@ -1,7 +1,5 @@
 const skiplist = ['#AP-visual', '#smooth-formula'];
 
-console.log(skiplist);
-
 (function($) {
   $.fn.isAfter = function(sel) {
     return $(this).index() > $(sel).index();
@@ -33,7 +31,6 @@ function skipped(classlist, id = "") {
 $("h3").each(function() { //add collapsible to every h3 and h4 with unique ids based on location
   const h3 = $(this);
   const h3texts = strRepl(h3.text());
-  console.log(h3texts);
   h3.attr('id', h3texts);
   h3.addClass('collapsible');
 
@@ -46,7 +43,6 @@ $("h3").each(function() { //add collapsible to every h3 and h4 with unique ids b
       }
       if (h4.isAfter($(h3)) && !(skipped(h4.attr('class'), id))) {
         const h4text = strRepl((h3texts + h4.text()))
-        console.log(h4text);
         h4.attr('id', h4text);
         h4.addClass('collapsible');
       }
@@ -56,7 +52,6 @@ $("h3").each(function() { //add collapsible to every h3 and h4 with unique ids b
   });
 });
 
-console.log('temp:');
 arrcollap = [];
 $('.collapsible').each(function() {
   const ele = $(this);
@@ -69,16 +64,12 @@ $('.collapsible').each(function() {
       return false
     }
   })
-  console.log(temp);
-  console.log(skiplist);
   while (temp.length > 0) {
     skiplist.shift()
     temp.shift()
   }
   arrcollap.push('#' + ele.attr('id'))
 })
-console.log('arrcollap:');
-console.log(arrcollap);
 
 $('h3').each(function(i, e) {
   $(this)
@@ -90,10 +81,7 @@ $('h3').each(function(i, e) {
   $('h4').each(function(p, q) {
     const h4 = $(this)
     h4id = '#' + h4.attr('id');
-    console.log(h4id);
     if ($.contains(content[0], h4[0])) {
-      console.log(arrcollap[arrcollap.indexOf(h4id) + 1]);
-      console.log(skiplist);
       if (arrcollap[arrcollap.indexOf(h4id) + 1] === undefined || arrcollap.indexOf(h4id) === -1) {
         $(this)
           .nextUntil(skiplist[0])
@@ -114,7 +102,6 @@ $('h3').each(function(i, e) {
 })
 
 var coll = $('.collapsible');
-console.log(coll.length);
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
