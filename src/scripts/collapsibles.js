@@ -89,7 +89,7 @@ $('h3').each(function(i, e) {
     console.log(h4id);
     if ($.contains(content[0], h4[0])) {
       console.log(arrcollap[arrcollap.indexOf(h4id) + 1]);
-      console.log(skiplist.length);
+      console.log(skiplist);
       if ((arrcollap[arrcollap.indexOf(h4id) + 1] === undefined && skiplist.length > 0) || arrcollap.indexOf(h4id) === -1) {
         $(this)
           .nextUntil(skiplist[0])
