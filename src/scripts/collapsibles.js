@@ -1,5 +1,7 @@
 const skiplist = ['#AP-visual', '#smooth-formula'];
 
+console.log(skiplist);
+
 (function($) {
   $.fn.isAfter = function(sel) {
     return $(this).index() > $(sel).index();
@@ -29,20 +31,23 @@ function skipped(classlist, id = "") {
 }
 
 $("h3").each(function() { //add collapsible to every h3 and h4 with unique ids based on location
-  var h3 = $(this);
-  var h3texts = strRepl(h3.text());
+  const h3 = $(this);
+  const h3texts = strRepl(h3.text());
+  console.log(h3texts);
   h3.attr('id', h3texts);
   h3.addClass('collapsible');
 
   $("h4").each(function() {
-    var h4 = $(this);
+    const h4 = $(this);
     if (h4.isBefore($(h3).nextEle("h3")) || $(h3).nextEle("h3").text() === "") {
       var id = ""
       if (h4.attr('id') !== undefined) {
         id = h4.attr('id');
       }
       if (h4.isAfter($(h3)) && !(skipped(h4.attr('class'), id))) {
-        h4.attr('id', strRepl((h3texts + h4.text())));
+        const h4text = strRepl((h3texts + h4.text()))
+        console.log(h4text);
+        h4.attr('id', h4text);
         h4.addClass('collapsible');
       }
     } else {
@@ -53,7 +58,7 @@ $("h3").each(function() { //add collapsible to every h3 and h4 with unique ids b
 
 arrcollap = [];
 $('.collapsible').each(function() {
-  var ele = $(this);
+  const ele = $(this);
   var temp = [];
   $.each(skiplist, function() {
     if ($(String(this)).isBefore(ele)) {
@@ -75,21 +80,23 @@ $('h3').each(function(i, e) {
     .nextUntil(this.tagName)
     .wrapAll('<div class="content"/>');
 
-  var content = $('.content').last();
+  const content = $('.content').last();
   var inside = false;
   $('h4').each(function(p, q) {
-    var h4 = $(this)
+    const h4 = $(this)
+    h4id = '#' + h4.attr('id');
+    console.log(h4id);
     if ($.contains(content[0], h4[0])) {
-      if ((arrcollap[arrcollap.indexOf('#' + h4.attr('id')) + 1] === undefined && skiplist.length > 0) || arrcollap.indexOf('#' + h4.attr('id')) === -1) {
+      if ((arrcollap[arrcollap.indexOf(h4id) + 1] === undefined && skiplist.length > 0) || arrcollap.indexOf(h4id) === -1) {
         $(this)
           .nextUntil(skiplist[0])
           .wrapAll("<div class='content'/>");
         return false
-      } else if (arrcollap[arrcollap.indexOf('#' + h4.attr('id')) + 1].slice(1) === h4.next().attr('id')) {
+      } else if (arrcollap[arrcollap.indexOf(h4id) + 1].slice(1) === h4.next().attr('id')) {
         $(this).removeClass('collapsible');
       } else {
         $(this)
-          .nextUntil(arrcollap[arrcollap.indexOf('#' + h4.attr('id')) + 1])
+          .nextUntil(arrcollap[arrcollap.indexOf(h4id) + 1])
           .wrapAll("<div class='content'/>");
       }
       inside = true;
@@ -100,6 +107,7 @@ $('h3').each(function(i, e) {
 })
 
 var coll = $('.collapsible');
+console.log(coll.length);
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
